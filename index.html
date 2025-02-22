@@ -6,7 +6,7 @@
     <title>Sessions</title>
     <style>
         body {
-            font-size: 100px;
+            font-size: 50px; /* Taille de police réduite */
             font-weight: bold;
             text-align: center;
             margin: 0;
@@ -35,4 +35,16 @@
             } else if (hour >= 8 && hour < 12) {
                 session = "EU SESSION";
             } else if (hour >= 12 && hour < 16) {
-                session = "EU & US S
+                session = "EU & US SESSION";
+            } else {
+                session = "US SESSION";
+            }
+
+            document.getElementById("sessionText").innerText = session;
+        }
+
+        // Appel de la fonction pour afficher la session
+        getSession();
+    </script>
+</body>
+</html>
