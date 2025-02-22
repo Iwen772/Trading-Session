@@ -14,6 +14,10 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-color: black; /* Pour un meilleur contraste */
+        }
+        #sessionText {
+            color: lightgray; /* Texte en gris clair */
         }
     </style>
 </head>
@@ -31,16 +35,4 @@
             } else if (hour >= 8 && hour < 12) {
                 session = "EU SESSION";
             } else if (hour >= 12 && hour < 16) {
-                session = "EU & US SESSION";
-            } else if (hour >= 16 && hour < 21) {
-                session = "US SESSION";
-            }
-
-            document.getElementById("sessionText").innerText = session;
-        }
-
-        setInterval(getSession, 1000);
-        getSession();
-    </script>
-</body>
-</html>
+                session = "EU & US S
