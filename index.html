@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sessions</title>
+    <style>
+        body {
+            font-size: 100px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="sessionText"></div>
+
+    <script>
+        function getSession() {
+            let now = new Date();
+            let hour = now.getHours();
+            let session = "";
+
+            if (hour >= 23 || hour < 8) {
+                session = "ASIAN SESSION";
+            } else if (hour >= 8 && hour < 12) {
+                session = "EU SESSION";
+            } else if (hour >= 12 && hour < 16) {
+                session = "EU & US SESSION";
+            } else if (hour >= 16 && hour < 21) {
+                session = "US SESSION";
+            }
+
+            document.getElementById("sessionText").innerText = session;
+        }
+
+        setInterval(getSession, 1000);
+        getSession();
+    </script>
+</body>
+</html>
